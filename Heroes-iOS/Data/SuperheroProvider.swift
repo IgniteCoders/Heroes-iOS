@@ -21,7 +21,7 @@ class SuperheroProvider {
             
             return try JSONDecoder().decode(SuperheroResponse.self, from: data).results
         } catch {
-            print(error.localizedDescription)
+            debugPrint(error)
             return []
         }
     }
